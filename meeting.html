@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meeting</title>
+        <link rel="stylesheet" href="./style.css"/>
+            <!-- Mermaid.js CDN -->
+        <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+             mermaid.initialize({ startOnLoad: true });
+         </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
+    <body>
+        <h1>NRNA meeting - August 23 2024</h1>
+        <div id="meeting" class="mermaid"> 
+            flowchart LR
+            A[Personal Introduction] --> B[Personal]
+            A --> C[Professional]
+            A --> D[Involvement with NRNA]
+            B --> E[Project Proposal]
+            C --> E
+            D --> E
+            E --> F[Website Build and Maintenance]
+        
+            %% Adding colors
+            A:::intro
+            B:::category1
+            C:::category2
+            D:::category3
+            E:::proposal
+            F:::final
+        
+            classDef intro fill:#f9f,stroke:#333,stroke-width:2px,color:#003366;
+            classDef category1 fill:#bbf,stroke:#333,stroke-width:2px,color:#003366;
+            classDef category2 fill:#bff,stroke:#333,stroke-width:2px,color:#003366;
+            classDef category3 fill:#fbf,stroke:#333,stroke-width:2px,color:#003366;
+            classDef proposal fill:#ffb,stroke:#333,stroke-width:2px,color:#003366;
+            classDef final fill:#fbb,stroke:#333,stroke-width:2px,color:#003366;
+           </div>
+
+           <div id="nrn" class="mermaid">
+            flowchart LR;
+            A[Start] --> B[Organizational Overview]
+            A --> C[Personal Introductions and Expectations] --> D[Website and Social Media Review]
+            B --> D[Website and Social Media Review] --> D1[Built, Maintain, Update]
+            B --> E[Timeline]
+            E --> E1[Year Calendar Review] --> E9[Evaluation System]
+            E --> E2[Monthly Events] --> E9
+            E --> E3[Special Events Nepali & Local, Western] --> E9
+            E9 --> E41[Organogram Executive Committee]
+            B --> E4[Roles and Responsibilities] --> E41
+            B --> I[Financial Resources and Subsidies] --> I1[Passed, Present, Future Situation]
+            B --> J[Goals and Benefits Overview]
+            J --> K[Rewards and Social Profit]
+            K --> L[End]
+            
+            classDef startEnd fill:#f9f,stroke:#333,stroke-width:2px,color:#000080;
+            classDef intro fill:#ccf,stroke:#333,stroke-width:2px,color:#000080;
+            classDef comm fill:#cfc,stroke:#333,stroke-width:2px,color:#000080;
+            classDef event fill:#ffc,stroke:#333,stroke-width:2px,color:#000080;
+            classDef resource fill:#fcf,stroke:#333,stroke-width:2px,color:#000080;
+            classDef impact fill:#fcc,stroke:#333,stroke-width:2px,color:#000080;
+
+            class A,L startEnd;
+            class B,C intro;
+            class D,D1 comm;
+            class E,E1,E2,E3 event;
+            class E4,E41 resource;
+            class I,I1 resource;
+            class J,K impact;
+           </div>
+
+           <div id="executivecommettee" class="mermaid">
+            graph TD;
+            A["Sita Sapkota<br/>President"]:::president
+    
+            subgraph Vice_Presidents
+                B1["Lokendra Nepal<br/>Vice-President"]:::vice_president
+                B2["Kasi Danai<br/>Vice-President"]:::vice_president
+                B3["Sabitri Giri<br/>Women Vice-President"]:::vice_president
+                B4["Indira Chamling Rai<br/>Indigenous Vice-President"]:::vice_president
+                B5["Ribu Basnet<br/>Youth Vice-President"]:::vice_president
+                end
+    
+            subgraph General_Secretary
+                C1["Rubina Sharma<br/>General Secretary"]:::general_secretary
+                C2["Rajendra Karki<br/>Deputy Secretary General"]:::secretary
+        
+            subgraph Secretaries
+                C3["Ramesh Dahal<br/>Secretary"]:::secretary
+                C4["Ishwara Sharma<br/>Secretary"]:::secretary
+                C5["Sanjay Dev Shrestha<br/>Secretary"]:::secretary
+                C6["Jamuna Sharma<br/>Women Secretary"]:::secretary
+                end
+            end
+    
+            subgraph Treasurers
+                D1["Ajit Tulachan<br/>Treasurer"]:::treasurer
+                D2["Dr. Raju Srivastava<br/>Joint Treasurer"]:::treasurer
+            end
+    
+            subgraph Coordinators
+                E1["Sharadha Dhital<br/>Women Coordinator"]:::coordinator
+                E2["Saru Gurung Shrestha<br/>Associate Women Coordinator"]:::coordinator
+                E3["Sudip Chaudhary<br/>Youth Coordinator"]:::coordinator
+        
+            subgraph Regional_Coordinators
+                E4["Suraj Kharel<br/>Leuven"]:::regional_coordinator
+                E5["Devi Sharma<br/>Brugge/Oostende/Knokke"]:::regional_coordinator
+                E6["Chitra Gurung<br/>Antwerpen"]:::regional_coordinator
+                E7["Ganga Prasad Gurung<br/>Gent"]:::regional_coordinator
+            end
+            end
+    
+            subgraph Members
+                F1["Sita Dahal<br/>Member"]:::member
+                F2["Ashoka K.C<br/>Member"]:::member
+                F3["Deepika K.C<br/>Member"]:::member
+                F4["Janu Nepal Kharel<br/>Member"]:::member
+                F5["Rashmi Niraula<br/>Member"]:::member
+                F6["Nita Subba<br/>Member"]:::member
+                F7["Roshan Gautam<br/>Member"]:::member
+                F8["Binod Shahi<br/>Member"]:::member
+                F9["Ramesh Sapkota<br/>Member"]:::member
+                F10["Surya Prasad Sapkota<br/>Member"]:::member
+                F11["Saroj Acharya<br/>Member"]:::member
+                F12["Bikki Malla<br/>Member"]:::member
+             end
+    
+    A --> B1
+    A --> B2
+    A --> B3
+    A --> B4
+    A --> B5
+    
+    A --> C1
+    C1 --> C2
+    C2 --> C3
+    C2 --> C4
+    C2 --> C5
+    C2 --> C6
+    
+    A --> D1
+    D1 --> D2
+    
+    A --> E1
+    E1 --> E2
+    
+    A --> E3
+    E3 --> E4
+    E3 --> E5
+    E3 --> E6
+    E3 --> E7
+    
+    A --> F1
+    A --> F2
+    A --> F3
+    A --> F4
+    A --> F5
+    A --> F6
+    A --> F7
+    A --> F8
+    A --> F9
+    A --> F10
+    A --> F11
+    A --> F12
+    
+    classDef president fill:#f96,stroke:#333,stroke-width:2px,color:navy;
+    classDef vice_president fill:#bbf,stroke:#333,stroke-width:2px,color:navy;
+    classDef general_secretary fill:#bfb,stroke:#333,stroke-width:2px,color:navy;
+    classDef secretary fill:#fb9,stroke:#333,stroke-width:2px,color:navy;
+    classDef treasurer fill:#fbb,stroke:#333,stroke-width:2px,color:navy;
+    classDef coordinator fill:#9bf,stroke:#333,stroke-width:2px,color:navy;
+    classDef regional_coordinator fill:#c9f,stroke:#333,stroke-width:2px,color:navy;
+    classDef member fill:#ddd,stroke:#333,stroke-width:2px,color:navy;
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              // Wait until the Mermaid diagrams are rendered
+              setTimeout(() => {
+                // Select all Mermaid SVGs
+                const svgs = document.querySelectorAll('.mermaid svg');
+      
+                svgs.forEach(svg => {
+                  if (svg) {
+                    // Apply D3 zoom behavior
+                    const zoom = d3.zoom()
+                      .scaleExtent([0.5, 5]) // Define zoom scale range
+                      .on('zoom', (event) => {
+                        svg.querySelector('g').setAttribute('transform', event.transform);
+                      });
+      
+                    d3.select(svg)
+                      .call(zoom);
+                  }
+                });
+              }, 1000); // Delay to ensure Mermaid has rendered the SVG
+            });
+          </script>
+    </body>
+</html>
