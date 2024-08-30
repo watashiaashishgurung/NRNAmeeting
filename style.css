@@ -44,3 +44,13 @@ html {
       opacity: 1;
     }
   }
+  footer {
+    font-size: 10px; /* Adjust the font size */
+    padding: 10px; /* Adjust the padding */
+    text-align: left; /* Center the text */
+    background-color: #f1f1f1; /* Background color */
+    margin-top: 210x; /* Space above the footer */
+}
+footer p {
+    margin: 5px 0; /* Space between paragraphs */
+}
