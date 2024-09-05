@@ -12,7 +12,10 @@
         <script src="https://d3js.org/d3.v7.min.js"></script>
     </head>
     <body>
-        <h1>NRNA meeting - August 30 2024</h1>
+        <h1>Zoom meeting - Sept 6th 2024</h1>
+          <section id="zoom-meeting"></section>
+        <p><h1><a href="https://us06web.zoom.us/j/8695076429?pwd=mBpO5l8biGpIyejd3tbXcSbrLSH7h1.1&omn=85189535865" target="_blank">Zoom Link</a></h1></p></body>
+          </section>
         <div id="meeting" class="mermaid"> 
             flowchart LR
             A[Personal Introduction] --> B[Personal]
@@ -45,7 +48,7 @@
             A --> C[Personal Introductions and Expectations] --> D[Website and Social Media Review]
             B --> D[Website and Social Media Review] --> D1[Built, Maintain, Update]
             B --> E[Timeline]
-            E --> E1[Year Calendar Review] --> E9[Evaluation System]--> ES[Satisfaction Survey]
+            E --> E1[Year Calendar Review] --> E9[Evaluation System] --> ES[Satisfaction Survey]
             E --> E2[Monthly Events] --> E9
             E --> E3[Special Events Nepali & Local, Western] --> E9
             E9 --> E41[Organogram Executive Committee]
@@ -61,15 +64,16 @@
             classDef event fill:#ffc,stroke:#333,stroke-width:2px,color:#000080;
             classDef resource fill:#fcf,stroke:#333,stroke-width:2px,color:#000080;
             classDef impact fill:#fcc,stroke:#333,stroke-width:2px,color:#000080;
-
+        
             class A,L startEnd;
             class B,C intro;
             class D,D1 comm;
             class E,E1,E2,E3 event;
             class E4,E41 resource;
             class I,I1 resource;
-            class J,K impact;
-           </div>
+        
+            click ES "evaluation_survey.html" "Go to Evaluation Survey"
+        </div>
 
            <div id="executivecommettee" class="mermaid">
             graph TD;
