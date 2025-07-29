@@ -3,6 +3,26 @@
     <head>
         <title>Meeting</title>
         <link rel="stylesheet" href="./style.css"/>
+        <style>
+          .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 2em 0;
+          }
+          .centered img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
+          .mermaid {
+            margin: 2em auto;
+            display: block;
+            max-width: 100%;
+          }
+        </style>
             <!-- Mermaid.js CDN -->
         <script type="module">
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -16,6 +36,7 @@
           <section id="zoom-meeting"></section>
         <p><h1><a href="https://us06web.zoom.us/j/8695076429?pwd=mBpO5l8biGpIyejd3tbXcSbrLSH7h1.1&omn=85189535865" target="_blank">Zoom Link</a></h1></p></body>
           </section>
+        <div class="centered">
         <div id="meeting" class="mermaid"> 
             flowchart LR
             A[Personal Introduction] --> B[Personal]
@@ -41,9 +62,11 @@
             classDef proposal fill:#ffb,stroke:#333,stroke-width:2px,color:#003366;
             classDef final fill:#fbb,stroke:#333,stroke-width:2px,color:#003366;
            </div>
+        </div>
 
+        <div class="centered">
            <div id="nrn" class="mermaid">
-            flowchart LR;
+flowchart LR;
             A[Start] --> B[Organizational Overview]
             A --> C[Personal Introductions and Expectations] --> D[Website and Social Media Review]
             B --> D[Website and Social Media Review] --> D1[Built, Maintain, Update]
@@ -75,79 +98,60 @@
             click ES "evaluation_survey.html" "Go to Evaluation Survey"
             click EDA "https://public.tableau.com/app/profile/aashish.gurung/vizzes" "Go to Data Science Analysis"
         </div>
+        </div>
 
-<div id="executivecommettee" class="mermaid">
-%%{init: {"theme":"default", "flowchart": {"curve":"linear"}}}%%
-graph TD
-    A["Lokendra Nepal<br/>President"]:::president
-    subgraph Vice_Presidents
-        B1["Ram Bahadur Pun<br/>Vice-President"]:::vice_president
-        B2["Indra Kamal Rajbhat<br/>Vice-President"]:::vice_president
-        B3["Ishwara Sharma<br/>Women Vice-President"]:::vice_president
-    end
-    subgraph Secretaries & Treasurers
-        C1["Deepak Raut<br/>General Secretary"]:::general_secretary
-        C2["Dirgha B. Malla<br/>Secretary"]:::secretary
-        C3["Suraj Kharel<br/>Treasurer"]:::treasurer
-        C4["Binod Shahi<br/>Co-Treasurer"]:::treasurer
-        C5["Rashmi Niraula<br/>Female Secretary"]:::secretary
-    end
-    subgraph Coordinators
-        D1["Binesh Thapa<br/>Youth Coordinator"]:::coordinator
-        D2["Sarita Paudel Dhamala<br/>Women Coordinator"]:::coordinator
-    end
-    subgraph Regional_Representatives
-        R1["Ashoka Sharma<br/>Antwerp"]:::regional_coordinator
-        R2["Rojan Bhattarai<br/>Leuven"]:::regional_coordinator
-        R3["Giban Sharma<br/>Brugge"]:::regional_coordinator
-        R4["Kailash Dangi<br/>Oostende"]:::regional_coordinator
-        R5["Sailaja Sharma Katel<br/>Brussels"]:::regional_coordinator
-        R6["Suman Koirala<br/>Ghent"]:::regional_coordinator
-    end
-    subgraph Executive_Members
-        M1["Dhurba Simkhada"]:::member
-        M2["Tumlal Ranjan Simkhada"]:::member
-        M3["Ramesh Paudel"]:::member
-        M4["Aashish Gurung"]:::member
-        M5["Chandani Khadka"]:::member
-        M6["Anita Acharya"]:::member
-        M7["Tika Chapagain"]:::member
-    end
-    ICG["Kishan KC<br/>ICC Member"]:::member
+        <div class="centered">
+           <div id="nrn" class="mermaid">
+    %%{init: {"theme":"default"}}%%
+    graph TD
+      A["Lokendra Nepal<br/>President"]:::president
+      A --> B1["Ram Bahadur Pun<br/>Vice-President"]:::vice_president
+      A --> B2["Indra Kamal Rajbhat<br/>Vice-President"]:::vice_president
+      A --> B3["Ishwara Sharma<br/>Women Vice-President"]:::vice_president
+      A --> C1["Deepak Raut<br/>General Secretary"]:::general_secretary
+      C1 --> C2["Dirgha B. Malla<br/>Secretary"]:::secretary
+      C1 --> C3["Suraj Kharel<br/>Treasurer"]:::treasurer
+      C1 --> C4["Binod Shahi<br/>Co-Treasurer"]:::treasurer
+      A --> C5["Rashmi Niraula<br/>Female Secretary"]:::secretary
 
-    A --> B1
-    A --> B2
-    A --> B3
-    A --> C1
-    C1 --> C2
-    C1 --> C3
-    C1 --> C4
-    A --> C5
-    A --> D1
-    A --> D2
-    A --> R1
-    A --> R2
-    A --> R3
-    A --> R4
-    A --> R5
-    A --> R6
-    A --> M1
-    A --> M2
-    A --> M3
-    A --> M4
-    A --> M5
-    A --> M6
-    A --> M7
-    A --> ICG
+      A --> D1["Binesh Thapa<br/>Youth Coordinator"]:::coordinator
+      A --> D2["Sarita Paudel Dhamala<br/>Women Coordinator"]:::coordinator
 
-    classDef president fill:#f96,stroke:#333,stroke-width:2px,color:navy;
-    classDef vice_president fill:#bbf,stroke:#333,stroke-width:2px,color:navy;
-    classDef general_secretary fill:#bfb,stroke:#333,stroke-width:2px,color:navy;
-    classDef secretary fill:#fb9,stroke:#333,stroke-width:2px,color:navy;
-    classDef treasurer fill:#fbb,stroke:#333,stroke-width:2px,color:navy;
-    classDef coordinator fill:#9bf,stroke:#333,stroke-width:2px,color:navy;
-    classDef regional_coordinator fill:#c9f,stroke:#333,stroke-width:2px,color:navy;
-    classDef member fill:#ddd,stroke:#333,stroke-width:2px,color:navy;
+      subgraph Regional Representatives
+        A --> R1["Ashoka Sharma<br/>Antwerp"]:::regional_coordinator
+        A --> R2["Rojan Bhattarai<br/>Leuven"]:::regional_coordinator
+        A --> R3["Giban Sharma<br/>Brugge"]:::regional_coordinator
+        A --> R4["Kailash Dangi<br/>Oostende"]:::regional_coordinator
+        A --> R5["Sailaja Sharma Katel<br/>Brussels"]:::regional_coordinator
+        A --> R6["Suman Koirala<br/>Ghent"]:::regional_coordinator
+      end
+
+      subgraph Executive Members
+        A --> M1["Dhurba Simkhada"]:::member
+        A --> M2["Tumlal Ranjan Simkhada"]:::member
+        A --> M3["Ramesh Paudel"]:::member
+        A --> M4["Aashish Gurung"]:::member
+        A --> M5["Chandani Khadka"]:::member
+        A --> M6["Anita Acharya"]:::member
+        A --> M7["Tika Chapagain"]:::member
+      end
+
+      A --> ICG["Kishan KC<br/>ICC Member"]:::member
+
+      classDef president fill:#f96,stroke:#333,stroke-width:2px,color:navy;
+      classDef vice_president fill:#bbf,stroke:#333,stroke-width:2px,color:navy;
+      classDef general_secretary fill:#bfb,stroke:#333,stroke-width:2px,color:navy;
+      classDef secretary fill:#fb9,stroke:#333,stroke-width:2px,color:navy;
+      classDef treasurer fill:#fbb,stroke:#333,stroke-width:2px,color:navy;
+      classDef coordinator fill:#9bf,stroke:#333,stroke-width:2px,color:navy;
+      classDef regional_coordinator fill:#c9f,stroke:#333,stroke-width:2px,color:navy;
+      classDef member fill:#ddd,stroke:#333,stroke-width:2px,color:navy;
+
+        </div>
+        </div>
+
+        <div class="centered">
+          <img src="NRNA-BE-Executive-Board-2025-2027.jpg" alt="NRNA BE Executive Board 2025-2027">
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
