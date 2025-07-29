@@ -76,101 +76,70 @@
             click EDA "https://public.tableau.com/app/profile/aashish.gurung/vizzes" "Go to Data Science Analysis"
         </div>
 
-           <div id="executivecommettee" class="mermaid">
-            graph TD;
-            A["Sita Sapkota<br/>President"]:::president
-    
-            subgraph Vice_Presidents
-                B1["Lokendra Nepal<br/>Vice-President"]:::vice_president
-                B2["Kasi Danai<br/>Vice-President"]:::vice_president
-                B3["Sabitri Giri<br/>Women Vice-President"]:::vice_president
-                B4["Indira Chamling Rai<br/>Indigenous Vice-President"]:::vice_president
-                B5["Ribu Basnet<br/>Youth Vice-President"]:::vice_president
-                end
-    
-            subgraph General_Secretary
-                C1["Rubina Sharma<br/>General Secretary"]:::general_secretary
-                C2["Rajendra Karki<br/>Deputy Secretary General"]:::secretary
-        
-            subgraph Secretaries
-                C3["Ramesh Dahal<br/>Secretary"]:::secretary
-                C4["Ishwara Sharma<br/>Secretary"]:::secretary
-                C5["Sanjay Dev Shrestha<br/>Secretary"]:::secretary
-                C6["Jamuna Sharma<br/>Women Secretary"]:::secretary
-                end
-            end
-    
-            subgraph Treasurers
-                D1["Ajit Tulachan<br/>Treasurer"]:::treasurer
-                D2["Dr. Raju Srivastava<br/>Joint Treasurer"]:::treasurer
-            end
-    
-            subgraph Coordinators
-                E1["Sharadha Dhital<br/>Women Coordinator"]:::coordinator
-                E2["Saru Gurung Shrestha<br/>Associate Women Coordinator"]:::coordinator
-                E3["Sudip Chaudhary<br/>Youth Coordinator"]:::coordinator
-        
-            subgraph Regional_Coordinators
-                E4["Suraj Kharel<br/>Leuven"]:::regional_coordinator
-                E5["Devi Sharma<br/>Brugge/Oostende/Knokke"]:::regional_coordinator
-                E6["Chitra Gurung<br/>Antwerpen"]:::regional_coordinator
-                E7["Ganga Prasad Gurung<br/>Gent"]:::regional_coordinator
-            end
-            end
-    
-            subgraph Members
-                F1["Sita Dahal<br/>Member"]:::member
-                F2["Ashoka K.C<br/>Member"]:::member
-                F3["Deepika K.C<br/>Member"]:::member
-                F4["Janu Nepal Kharel<br/>Member"]:::member
-                F5["Rashmi Niraula<br/>Member"]:::member
-                F6["Nita Subba<br/>Member"]:::member
-                F7["Roshan Gautam<br/>Member"]:::member
-                F8["Binod Shahi<br/>Member"]:::member
-                F9["Ramesh Sapkota<br/>Member"]:::member
-                F10["Surya Prasad Sapkota<br/>Member"]:::member
-                F11["Saroj Acharya<br/>Member"]:::member
-                F12["Bikki Malla<br/>Member"]:::member
-             end
-    
+<div id="executivecommettee" class="mermaid">
+%%{init: {"theme":"default", "flowchart": {"curve":"linear"}}}%%
+graph TD
+    A["Lokendra Nepal<br/>President"]:::president
+    subgraph Vice_Presidents
+        B1["Ram Bahadur Pun<br/>Vice-President"]:::vice_president
+        B2["Indra Kamal Rajbhat<br/>Vice-President"]:::vice_president
+        B3["Ishwara Sharma<br/>Women Vice-President"]:::vice_president
+    end
+    subgraph Secretaries & Treasurers
+        C1["Deepak Raut<br/>General Secretary"]:::general_secretary
+        C2["Dirgha B. Malla<br/>Secretary"]:::secretary
+        C3["Suraj Kharel<br/>Treasurer"]:::treasurer
+        C4["Binod Shahi<br/>Co-Treasurer"]:::treasurer
+        C5["Rashmi Niraula<br/>Female Secretary"]:::secretary
+    end
+    subgraph Coordinators
+        D1["Binesh Thapa<br/>Youth Coordinator"]:::coordinator
+        D2["Sarita Paudel Dhamala<br/>Women Coordinator"]:::coordinator
+    end
+    subgraph Regional_Representatives
+        R1["Ashoka Sharma<br/>Antwerp"]:::regional_coordinator
+        R2["Rojan Bhattarai<br/>Leuven"]:::regional_coordinator
+        R3["Giban Sharma<br/>Brugge"]:::regional_coordinator
+        R4["Kailash Dangi<br/>Oostende"]:::regional_coordinator
+        R5["Sailaja Sharma Katel<br/>Brussels"]:::regional_coordinator
+        R6["Suman Koirala<br/>Ghent"]:::regional_coordinator
+    end
+    subgraph Executive_Members
+        M1["Dhurba Simkhada"]:::member
+        M2["Tumlal Ranjan Simkhada"]:::member
+        M3["Ramesh Paudel"]:::member
+        M4["Aashish Gurung"]:::member
+        M5["Chandani Khadka"]:::member
+        M6["Anita Acharya"]:::member
+        M7["Tika Chapagain"]:::member
+    end
+    ICG["Kishan KC<br/>ICC Member"]:::member
+
     A --> B1
     A --> B2
     A --> B3
-    A --> B4
-    A --> B5
-    
     A --> C1
     C1 --> C2
-    C2 --> C3
-    C2 --> C4
-    C2 --> C5
-    C2 --> C6
-    
+    C1 --> C3
+    C1 --> C4
+    A --> C5
     A --> D1
-    D1 --> D2
-    
-    A --> E1
-    E1 --> E2
-    
-    A --> E3
-    E3 --> E4
-    E3 --> E5
-    E3 --> E6
-    E3 --> E7
-    
-    A --> F1
-    A --> F2
-    A --> F3
-    A --> F4
-    A --> F5
-    A --> F6
-    A --> F7
-    A --> F8
-    A --> F9
-    A --> F10
-    A --> F11
-    A --> F12
-    
+    A --> D2
+    A --> R1
+    A --> R2
+    A --> R3
+    A --> R4
+    A --> R5
+    A --> R6
+    A --> M1
+    A --> M2
+    A --> M3
+    A --> M4
+    A --> M5
+    A --> M6
+    A --> M7
+    A --> ICG
+
     classDef president fill:#f96,stroke:#333,stroke-width:2px,color:navy;
     classDef vice_president fill:#bbf,stroke:#333,stroke-width:2px,color:navy;
     classDef general_secretary fill:#bfb,stroke:#333,stroke-width:2px,color:navy;

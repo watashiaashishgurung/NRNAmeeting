@@ -1,3 +1,7 @@
+/* Make the executive committee Mermaid graph taller */
+#executivecommettee.mermaid {
+  height: 600px;
+}
 html {
     scroll-behavior: smooth;
   }
